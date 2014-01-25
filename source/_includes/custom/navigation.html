@@ -1,0 +1,24 @@
+<style type="text/css">
+.icon-flag a img {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+</style>
+<ul class="main-navigation">
+    <li><a href="{{ root_url }}/">
+        <span class="blue_light">
+            {{ site.title }}
+        </span>
+       {% if site.subtitle %}
+           <span class="blue_dark">
+             {{ site.subtitle }}
+           </span>
+       {% endif %}
+    </a></li>
+  <li><a href="{{ root_url }}/">Blog</a></li>
+  <li><a href="{{ root_url }}/">Labs</a></li>
+  <li><a href="{{ root_url }}/blog/archives">Archives</a></li>
+  <li><a href="{{ root_url }}/about">About me</a></li>
+  <li class="icon-flag"><a href="http://www.jairobjunior.com.br/{{ page.current.url }}">{% img /images/flagbr.png 'Traduzir português' 'Português' %}&nbsp;<span>Português</span></a></li>  
+</ul>
