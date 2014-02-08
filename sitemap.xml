@@ -1,33 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://www.jairobjunior.com/blog/blog/2014/02/05/what-youll-find-in-my-blog/</loc>
+        <loc>http://www.jairobjunior.com/blog/2014/02/05/what-youll-find-in-my-blog/</loc>
         <lastmod>2014-02-08T20:01:33-03:00</lastmod>
     </url>
     <url>
         <loc>
-            http://www.jairobjunior.com/blog/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios/
+            http://www.jairobjunior.com/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios/
         </loc>
         <lastmod>2014-02-08T19:07:47-03:00</lastmod>
     </url>
     <url>
-        <loc>http://www.jairobjunior.com/blog/about/</loc>
+        <loc>http://www.jairobjunior.com/about/</loc>
         <lastmod>2014-02-05T12:11:02-03:00</lastmod>
     </url>
     <url>
-        <loc>http://www.jairobjunior.com/blog/blog/archives/</loc>
+        <loc>http://www.jairobjunior.com/blog/archives/</loc>
         <lastmod>2014-02-08T20:01:33-03:00</lastmod>
     </url>
     <url>
-        <loc>http://www.jairobjunior.com/blog/</loc>
+        <loc>http://www.jairobjunior.com/</loc>
         <lastmod>2014-02-08T20:01:33-03:00</lastmod>
     </url>
     <url>
-        <loc>http://www.jairobjunior.com/blog/labs/</loc>
+        <loc>http://www.jairobjunior.com/labs/</loc>
         <lastmod>2014-02-08T20:01:33-03:00</lastmod>
     </url>
     <url>
-        <loc>http://www.jairobjunior.com/blog/robots.txt</loc>
+        <loc>http://www.jairobjunior.com/robots.txt</loc>
         <lastmod>2014-01-22T15:10:52-03:00</lastmod>
     </url>
 </urlset>

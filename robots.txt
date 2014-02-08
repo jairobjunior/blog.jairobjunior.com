@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://www.jairobjunior.com/blog/sitemap.xml 
+Sitemap: http://www.jairobjunior.com/sitemap.xml 

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Labs | @jairobjunior - Mobile Life]]></title>
-  <link href="http://www.jairobjunior.com/blog/blog/categories/labs/atom.xml" rel="self"/>
-  <link href="http://www.jairobjunior.com/blog/"/>
-  <updated>2014-02-08T20:01:54-03:00</updated>
-  <id>http://www.jairobjunior.com/blog/</id>
+  <link href="http://www.jairobjunior.com/blog/categories/labs/atom.xml" rel="self"/>
+  <link href="http://www.jairobjunior.com/"/>
+  <updated>2014-02-08T20:18:59-03:00</updated>
+  <id>http://www.jairobjunior.com/</id>
   <author>
     <name><![CDATA[Jairo Barros Junior]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Creating UIButton with border and hover native iOS]]></title>
-    <link href="http://www.jairobjunior.com/blog/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios/"/>
+    <link href="http://www.jairobjunior.com/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios/"/>
     <updated>2014-02-08T22:43:41-03:00</updated>
-    <id>http://www.jairobjunior.com/blog/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios</id>
+    <id>http://www.jairobjunior.com/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios</id>
     <content type="html"><![CDATA[<p><img class="right half" src="/images/labs/2014-02-08/app-sample-screenshot.png"></p>
 
 <h3>The problem</h3>
