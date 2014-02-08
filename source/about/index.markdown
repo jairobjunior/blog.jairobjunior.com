@@ -33,7 +33,7 @@ It is an open source project for Android platform, written in Java. This project
 
 ## Languages
 
-Pick out a language and <a href="{{ root_url }}/about/#lets_talk!" target="lets_talk">lets talk!</a>
+Pick out a language and <a href="{{ root_url }}/about/#lets_talk!">lets talk!</a>
 
 * Portuguese
 * English

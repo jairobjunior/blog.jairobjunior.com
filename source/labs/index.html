@@ -1,0 +1,77 @@
+---
+layout: page
+comments: false
+sharing: false
+footer: false
+---
+
+<style type="text/css">
+
+section>ol>.lab {
+	list-style: none;
+	background: white;
+	position: relative;
+	padding: 20px 0 20px 20px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+	margin: 0 0 20px 0;	
+}
+
+section>ol>.lab h1 {
+	font-size: 2.0em;
+	padding: 0 0 0 0;
+	margin-bottom: 0em;
+}
+
+section>ol :hover {    
+    background: #F8F8F8;
+}
+
+section>ol>.lab a {
+	text-decoration: none;
+    display: block;
+    color: #000;
+    white-space: normal;
+}
+
+.lab-content p {	
+	display: block;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	line-height: 1.3em
+}
+
+.lab-date-categories {
+	font-family: "PT Sans","Helvetica Neue",Arial,sans-serif;	
+	font-size: .85em;
+	overflow: hidden;	
+}
+
+</style>
+
+<div>
+	<section id="labs">
+		<ol class="labList">
+			<li class="lab">
+				<a href="{{ root_url }}/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios/" class="none-decoration">
+					<div>
+						{% img left /images/labs/2014-02-08/cover.png 200 200 'Traduzir português' %}
+						<h1>Creating UIButton with border and hover native iOS</h1>
+						<p class="lab-date-categories">
+							<time pubdate="" datetime="2014-02-03T13:46:30+00:00">Feb 3rd, 2014</time>
+							- 
+							<span class="categories">
+								Labs, iOS, UIButton, Border, Hover, Highlighted
+							</span>
+						</p>
+						<div class="lab-content">
+							<p>By default, the Interface Builder doesn't allow you to change the background color of the button for the highlighted state. Here you will undestand how it is possible using CFUIButton.</p>
+							<p>There are also features that you can add a border to your UIButton, change the border color, make corners and so on.</p>							
+						</div>
+					</div>
+				</a>
+			</li>			
+		</ol>
+	</section>
+</div>

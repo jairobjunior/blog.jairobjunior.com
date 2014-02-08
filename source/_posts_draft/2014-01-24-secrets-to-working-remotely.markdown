@@ -7,6 +7,8 @@ categories: [Working, Remotely, Livestyle]
 published: false
 ---
 
+{% youtube QWq0bSvc31A %}
+
 Over the past 10 years I have worked as a software architect both in an office structure and as a freelancer. For the last year and a half, I have made a full transition into working remotely. If you are in the tech business, chances are you do work from home anyways. So why not have the freedom to live anywhere in the world?
 
 Here are tips to keeping your clients happy and maximizing the success of your business.
