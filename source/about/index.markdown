@@ -13,7 +13,7 @@ footer: true
 
 {% img right /images/profile.jpg 'jairobjunior' %}
 
-Somewhere in between kicking [trollers][tr] off chat sites and playing on competitive video game teams as a teenager, my love for technology was born. The first programming language I studied was PHP. It was after I learned how to make content dynamically that things got interesting. It opened my mind to understanding how a website works full stack. Einstein says, “The mind that opens to a new idea never returns to its original size,” I find this to be one of the truths in life.
+Somewhere in between kicking [trollers][tr] off chat sites and playing on competitive video game teams as a teenager, my love for technology was born. The first programming language I studied was PHP. It was after I learned how to make content dynamically that things got interesting. It opened my mind to understanding how a website works full stack.<!-- Einstein says, “The mind that opens to a new idea never returns to its original size,” I find this to be one of the truths in life. -->
 
 My next step was studying Information Systems, where I learned the difference between being a [programmer][p] and a [software architect][sa]. Becoming a software architect allowed me to focus on increasing the internal quality of code. After that my career began to unfold organically. I continued studying varies program languages while working as a developer and team leader with different companies including the Court of Justice in Brasil, and Indra. During this time I cofounded a software company called [Sook][s], that developed unique systems for client and business interaction.
 
