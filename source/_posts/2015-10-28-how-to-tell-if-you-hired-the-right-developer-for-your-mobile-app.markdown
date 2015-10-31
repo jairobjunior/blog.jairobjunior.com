@@ -4,7 +4,7 @@ title: "How To Tell If You Hired The Right Developer For Your Mobile App"
 date: 2015-10-28 15:08:56 -0700
 comments: true
 categories: [Entrepreneur, Mobile Apps, Developers, Software Development]
-published: false
+published: true
 ---
 {% img right half /images/posts/2015-10-28/datetimepicker.png %}
 
