@@ -4,7 +4,7 @@
   <title><![CDATA[@jairobjunior - Mobile Life]]></title>
   <link href="http://www.jairobjunior.com/atom.xml" rel="self"/>
   <link href="http://www.jairobjunior.com/"/>
-  <updated>2015-10-31T16:02:46-07:00</updated>
+  <updated>2015-10-31T16:08:08-07:00</updated>
   <id>http://www.jairobjunior.com/</id>
   <author>
     <name><![CDATA[Jairo Barros Junior]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How To Tell If You Hired The Right Developer For Your Mobile App]]></title>
+    <link href="http://www.jairobjunior.com/blog/2015/10/28/how-to-tell-if-you-hired-the-right-developer-for-your-mobile-app/"/>
+    <updated>2015-10-28T15:08:56-07:00</updated>
+    <id>http://www.jairobjunior.com/blog/2015/10/28/how-to-tell-if-you-hired-the-right-developer-for-your-mobile-app</id>
+    <content type="html"><![CDATA[<p><img class="right half" src="http://www.jairobjunior.com/images/posts/2015-10-28/datetimepicker.png"></p>
+
+<p>It&rsquo;s no secret the tech industry is booming, and as a result there are a lot of mediocre to just plain awful apps racing to the market. I’ve been developing software for over 10 years and mobile apps for 5, for agencies and medium-size businesses. Each project that I’ve worked on has had one thing in common: The project was poorly developed initially and as a result it needed to be scrapped and started again from scratch with a new (and better) development team.</p>
+
+<p>Most of my clients already had a previous version of their app or it was under development. They come up looking to add new features, updating the app to support the latest OS system or “just“ swapping the whole <a href="https://en.wikipedia.org/wiki/User_experience_design">UI/UX</a> to a modern look and feel. But be careful, these are changes that might turn out to be more expensive than expected. I am going to help you avoid future high costs by getting the right <a href="http://www.sookapps.com">dev team (a company, code house or freelancers)</a> at the beginning of your project.</p>
+
+<p>One thing that shocks me the most is how bad the internal quality of mobile apps are being delivered. I am the kind of person that loves to reuse, recycle and not keep useless stuff. So, I do the same with code, but it’s almost impossible to reuse or refactor a project that has all of the potential to be simple, but it wasn’t because of the “creative” dev team who made such a mess that in a short term the project will be filled with bugs and impracticable to give maintenance.</p>
+
+<p>It’s common to hear developers say:</p>
+
+<blockquote><p>“I am going to do the fastest way and when it’s working I can come back and refactor it”.</p></blockquote>
+
+<p>They do that because they are taught that way, especially when the problem is complex. Do not get me wrong, I like this mentality. But the issue is when they get the feature working their non-technical manager is asking for the next tasks that are already late. Daily, developers face in a situation where they are the only ones responsible for the whole deadline of the project, which it is irresponsible, because usually devs are not communicative or strong enough to say that the next task won’t be touched until the current code is ready for production.</p>
+
+<p>Here are 5 key questions to ask mobile app dev teams before closing the deal:</p>
+
+<h3>1. “How many of the mobile apps that you developed are you still giving maintenance to?”</h3>
+
+<p>First off, you need to know if the dev team is good building relationship with clients. You need to get someone who cares and is interested in your product. A good sign of that is if the dev team wants to start brainstorming with you on your first meeting, before even signing the contract. Trust me, a good dev team will help you to discover things that you haven’t thought about. It’s always good to know the amount of clients that have stuck around. Mobile app are not a one-time activity, it requires a lot of evolutions and cycles.</p>
+
+<h3>2. “How are you going to develop my product? What are the technical aspects?”</h3>
+
+<p>You will probably need a mobile app that is compatible with iPhones and Androids, maybe tablets as well, and to achieve this goal there are so many different ways. Your app can be done using hybrid or native technology, it might need an API to store data in the cloud, it might need to communicate to an external hardware through Bluetooth etc. The project can be really complex or just simple, but if you are not technical or don’t have someone technical in your team it can get complicated to understand what you are paying for. So, I would recommend you to get at least 5 different estimates and ask for the technical aspects, compare them and go back with more questions. If that is not the case you might find a good answer after your third bid.</p>
+
+<h3>3. “Who is the dev team? How can you guaranty the quality of my app?”</h3>
+
+<p>It’s important to know the amount of people in the project and who they are. Depending on the size of the project, companies will allocate one designer, until his work is done, one iOS developer, one Android developer and one project manager. This works well in certainty cases, but for your project make sure that there is a skilled technical leader evaluating/reviews the code produced. This person is really important to keep the quality of your product. And ask if their devs are senior level in software development.</p>
+
+<h3>4. “Do you mind if I call one of your clients for feedback?”</h3>
+
+<p>If a team is comfortable sharing their client’s contact information, reach out to them and get real feedback on their company. You can also look for testimonios and check the veracity of them, in case you feel that is not necessary calling. But if you decide to call ask questions like: How was the communication? Was the technical team in meetings? What about the deadline? Did they deliver everything that was supposed to? Did they keep the project on the budget?</p>
+
+<h3>5. “How can you guarantee that the schedule will be followed?”</h3>
+
+<p>Most of the projects that I have been invited to work on had unrealistic deadlines, this is because usually the tech people are not involved during the estimation process and I have to put them together. So, listen carefully to the answer of this question and make sure that they will use the programmers and analysts on this and ask to have a test version every week or 15 days, depending on the size of the project. Do not let them work and give to you a final version when the project is “completed”, it might turn out to be something totally different from what you were expecting.</p>
+
+<p>These questions might sound like you are interrogating someone, and in reality that is what you have to do, because you are about to spend a lot of money and being in touch for months with people that you have just met, so make sure of the decision that you are going forward with.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Creating UIButton with border and hover native iOS]]></title>
