@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: UIButton | @jairobjunior - Mobile Life]]></title>
-  <link href="http://www.jairobjunior.com//github/blog/categories/uibutton/atom.xml" rel="self"/>
-  <link href="http://www.jairobjunior.com//github/"/>
-  <updated>2015-10-31T15:53:39-07:00</updated>
-  <id>http://www.jairobjunior.com//github/</id>
+  <link href="http://www.jairobjunior.com/blog/categories/uibutton/atom.xml" rel="self"/>
+  <link href="http://www.jairobjunior.com/"/>
+  <updated>2015-10-31T16:02:46-07:00</updated>
+  <id>http://www.jairobjunior.com/</id>
   <author>
     <name><![CDATA[Jairo Barros Junior]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Creating UIButton with border and hover native iOS]]></title>
-    <link href="http://www.jairobjunior.com//github/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios/"/>
+    <link href="http://www.jairobjunior.com/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios/"/>
     <updated>2014-02-08T17:43:41-08:00</updated>
-    <id>http://www.jairobjunior.com//github/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios</id>
+    <id>http://www.jairobjunior.com/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios</id>
     <content type="html"><![CDATA[<p><img class="right half" src="/images/labs/2014-02-08/app-sample-screenshot.png"></p>
 
 <h3>The problem</h3>

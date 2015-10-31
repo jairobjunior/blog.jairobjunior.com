@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[@jairobjunior - Mobile Life]]></title>
-  <link href="http://www.jairobjunior.com//github/atom.xml" rel="self"/>
-  <link href="http://www.jairobjunior.com//github/"/>
-  <updated>2015-10-31T15:53:39-07:00</updated>
-  <id>http://www.jairobjunior.com//github/</id>
+  <link href="http://www.jairobjunior.com/atom.xml" rel="self"/>
+  <link href="http://www.jairobjunior.com/"/>
+  <updated>2015-10-31T16:02:46-07:00</updated>
+  <id>http://www.jairobjunior.com/</id>
   <author>
     <name><![CDATA[Jairo Barros Junior]]></name>
     
@@ -15,16 +15,16 @@
   
   <entry>
     <title type="html"><![CDATA[Creating UIButton with border and hover native iOS]]></title>
-    <link href="http://www.jairobjunior.com//github/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios/"/>
+    <link href="http://www.jairobjunior.com/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios/"/>
     <updated>2014-02-08T17:43:41-08:00</updated>
-    <id>http://www.jairobjunior.com//github/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios</id>
-    <content type="html"><![CDATA[<p><img class="right half" src="http://www.jairobjunior.com//github/images/labs/2014-02-08/app-sample-screenshot.png"></p>
+    <id>http://www.jairobjunior.com/blog/2014/02/08/creating-uibutton-with-border-and-hover-native-ios</id>
+    <content type="html"><![CDATA[<p><img class="right half" src="http://www.jairobjunior.com/images/labs/2014-02-08/app-sample-screenshot.png"></p>
 
 <h3>The problem</h3>
 
 <p>When you are using Interface Builder to create your buttons there is just a few properties that we can change for different <code>UIButton</code>&rsquo;s state.</p>
 
-<p><img src="http://www.jairobjunior.com//github/images/labs/2014-02-08/uibutton-state-config.png"></p>
+<p><img src="http://www.jairobjunior.com/images/labs/2014-02-08/uibutton-state-config.png"></p>
 
 <p>So, that brings us some restrictions if we need to change the background color of the highlighted state. I have seen people creating an image of a button relatively simple, but one image for the normal and the other for the highlighted state or some other properties. I confess that it was my approach for a short while, until I had to deal with a bunch of buttons that the only thing that changed was the text, and sometimes an icon embeded in the button.</p>
 
@@ -58,11 +58,11 @@
 
 <p>If you are using Interface Builder, the next step is to set <code>CFUIButton</code> as a custom class for your button.</p>
 
-<p><img src="http://www.jairobjunior.com//github/images/labs/2014-02-08/custom-class-cfuibutton.png"></p>
+<p><img src="http://www.jairobjunior.com/images/labs/2014-02-08/custom-class-cfuibutton.png"></p>
 
 <p>Cool, and now set your <code>CFUIButton</code> type as custom.</p>
 
-<p><img src="http://www.jairobjunior.com//github/images/labs/2014-02-08/uibutton-type-config.png"></p>
+<p><img src="http://www.jairobjunior.com/images/labs/2014-02-08/uibutton-type-config.png"></p>
 
 <p>But if you are creating your button programmatically, you just have to extend <code>CFUIButton</code>.</p>
 
@@ -142,7 +142,7 @@
 
 <p>You also can create button with corner:</p>
 
-<p><img src="http://www.jairobjunior.com//github/images/labs/2014-02-08/connection-with-facebook.png"></p>
+<p><img src="http://www.jairobjunior.com/images/labs/2014-02-08/connection-with-facebook.png"></p>
 
 <p>Since that you have your instance variable, in the <code>- (void)viewDidLoad</code> method, add the following line:</p>
 
@@ -153,9 +153,9 @@
 
 <h3>Removing border</h3>
 
-<p>You can also remove the border if you just want to use the benefit of the <a href="http://www.jairobjunior.com//github/blog/2014/02/03/creating-uibutton-with-border-and-hover-native-ios/#highlighted">highlighted state color</a>.</p>
+<p>You can also remove the border if you just want to use the benefit of the <a href="http://www.jairobjunior.com/blog/2014/02/03/creating-uibutton-with-border-and-hover-native-ios/#highlighted">highlighted state color</a>.</p>
 
-<p><img src="http://www.jairobjunior.com//github/images/labs/2014-02-08/message-without-border.png"></p>
+<p><img src="http://www.jairobjunior.com/images/labs/2014-02-08/message-without-border.png"></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">_customButtonWithBorder</span> <span class="n">removeBorder</span><span class="p">];</span>
@@ -168,7 +168,7 @@
 
 <p>You can change the text color for the highlighted state through the Interface Builder, but to change the background color, it becomes a little bit more complicated, so if you want to have something like that:</p>
 
-<p><img src="http://www.jairobjunior.com//github/images/labs/2014-02-08/with-different-hover-color.png"> <img src="http://www.jairobjunior.com//github/images/labs/2014-02-08/with-different-hover-color-selected.png"></p>
+<p><img src="http://www.jairobjunior.com/images/labs/2014-02-08/with-different-hover-color.png"> <img src="http://www.jairobjunior.com/images/labs/2014-02-08/with-different-hover-color-selected.png"></p>
 
 <p>You can use:</p>
 
@@ -205,14 +205,14 @@
   
   <entry>
     <title type="html"><![CDATA[What you'll find in my blog]]></title>
-    <link href="http://www.jairobjunior.com//github/blog/2014/02/05/what-youll-find-in-my-blog/"/>
+    <link href="http://www.jairobjunior.com/blog/2014/02/05/what-youll-find-in-my-blog/"/>
     <updated>2014-02-05T07:01:22-08:00</updated>
-    <id>http://www.jairobjunior.com//github/blog/2014/02/05/what-youll-find-in-my-blog</id>
+    <id>http://www.jairobjunior.com/blog/2014/02/05/what-youll-find-in-my-blog</id>
     <content type="html"><![CDATA[<p>Hi guys, here is an overview of what you will find in <a href="http://www.jairobjunior.com">this blog</a>. Basically, I will share <a href="https://linkedin.com/in/jairobjunior/en">my experience</a> as a software architect. There will be a big focus on mobile app development. I will also be posting about entrepreneurship and working remotely.</p>
 
 <p>The <a href="http://www.jairobjunior.com/labs">labs</a> section has hacks to help you in your projects. You will hear a lot about <a href="https://github.com/jairobjunior/Ocypode">Ocypode</a> and <a href="https://github.com/jairobjunior/Catfish/">Catfish</a>, they are open source projects that I created to colaborate with you on. Please check them out!</p>
 
-<p><a href="http://www.jairobjunior.com//github/about/#lets_talk!">Email</a> me if you have any questions or blog post requests.</p>
+<p><a href="http://www.jairobjunior.com/about/#lets_talk!">Email</a> me if you have any questions or blog post requests.</p>
 ]]></content>
   </entry>
   
