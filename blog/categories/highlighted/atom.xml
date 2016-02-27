@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Highlighted | @jairobjunior - Mobile Life]]></title>
   <link href="http://www.jairobjunior.com/blog/categories/highlighted/atom.xml" rel="self"/>
   <link href="http://www.jairobjunior.com/"/>
-  <updated>2015-11-01T11:12:24-08:00</updated>
+  <updated>2016-02-26T20:43:05-08:00</updated>
   <id>http://www.jairobjunior.com/</id>
   <author>
     <name><![CDATA[Jairo Barros Junior]]></name>
@@ -33,6 +33,9 @@
 <h3>How to use it?</h3>
 
 <p>First you have to add <a href="https://github.com/jairobjunior/Catfish">Catfish</a> as a dependency to your project, inside of it there is a class <code>CFUIButton</code>. It has methods to:</p>
+
+<!--more-->
+
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>CFUIButton.h </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
