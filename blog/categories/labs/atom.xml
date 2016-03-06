@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Labs | @jairobjunior - Mobile Life]]></title>
   <link href="http://www.jairobjunior.com/blog/categories/labs/atom.xml" rel="self"/>
   <link href="http://www.jairobjunior.com/"/>
-  <updated>2016-02-26T20:43:05-08:00</updated>
+  <updated>2016-03-06T15:42:53-08:00</updated>
   <id>http://www.jairobjunior.com/</id>
   <author>
     <name><![CDATA[Jairo Barros Junior]]></name>
@@ -12,6 +12,191 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Rotate Only One View Controller to Landscape Orientation in iOS Swift]]></title>
+    <link href="http://www.jairobjunior.com/blog/2016/03/05/how-to-rotate-only-one-view-controller-to-landscape-in-ios-slash-swift/"/>
+    <updated>2016-03-05T23:38:19-08:00</updated>
+    <id>http://www.jairobjunior.com/blog/2016/03/05/how-to-rotate-only-one-view-controller-to-landscape-in-ios-slash-swift</id>
+    <content type="html"><![CDATA[<p><img class="right half" src="/images/labs/2016-03-06/screens-device-orientation.png" width="395" height="293"></p>
+
+<p>It might be tricky to create a whole iOS Swift project using portrait only and suddenly when your app is far down the road you need to give landscape orientation support for only one View Controller.</p>
+
+<p>Immediately you could think&hellip; &ldquo;I can get this done by using <code>func shouldAutorotate() -&gt; Bool</code> and <code>func supportedInterfaceOrientations() -&gt; UIInterfaceOrientationMask</code>&rdquo;.</p>
+
+<p>The only problem of this is that you&rsquo;ll need to enable device rotation for both <strong>Landscape Left and Right</strong> and depending of your code structure you&rsquo;ll need to go over every simple View Controller adding <code>func shouldAutorotate() -&gt; Bool</code> and <code>func supportedInterfaceOrientations() -&gt; UIInterfaceOrientationMask</code>. It can be painful if you have a lot of classes.</p>
+
+<p>Fortunately we can move all of the hard work to be done at one place, which is in our <em>AppDelegate.swift</em>.</p>
+
+<!--more-->
+
+
+<h3>Deployment Info &ndash; Device Orientation</h3>
+
+<p>If your project is already in portrait you won&rsquo;t need to change anything. If not, make sure that only portrait is selected.</p>
+
+<p><img src="/images/labs/2016-03-06/device-orientation.png"></p>
+
+<h3>AppDelegate.swift</h3>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>AppDelegate.swift </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">hellip</span><span class="p">;</span>
+</span><span class='line'><span class="n">func</span> <span class="n">application</span><span class="p">(</span><span class="nl">application:</span> <span class="n">UIApplication</span><span class="p">,</span> <span class="n">supportedInterfaceOrientationsForWindow</span> <span class="nl">window:</span> <span class="n">UIWindow</span><span class="o">?</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;</span> <span class="n">UIInterfaceOrientationMask</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">if</span> <span class="n">let</span> <span class="n">rootViewController</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">topViewControllerWithRootViewController</span><span class="p">(</span><span class="n">window</span><span class="o">?</span><span class="p">.</span><span class="n">rootViewController</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">rootViewController</span><span class="p">.</span><span class="n">respondsToSelector</span><span class="p">(</span><span class="n">Selector</span><span class="p">(</span><span class="s">&quot;canRotate&quot;</span><span class="p">)))</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// Unlock landscape view orientations for this view controller</span>
+</span><span class='line'>        <span class="k">return</span> <span class="p">.</span><span class="n">AllButUpsideDown</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Only allow portrait (standard behaviour)</span>
+</span><span class='line'><span class="k">return</span> <span class="p">.</span><span class="n">Portrait</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">private</span> <span class="n">func</span> <span class="n">topViewControllerWithRootViewController</span><span class="p">(</span><span class="nl">rootViewController:</span> <span class="n">UIViewController</span><span class="o">!</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;</span> <span class="n">UIViewController</span><span class="o">?</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">if</span> <span class="p">(</span><span class="n">rootViewController</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nb">nil</span> <span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="n">rootViewController</span><span class="p">.</span><span class="n">isKindOfClass</span><span class="p">(</span><span class="n">UITabBarController</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">topViewControllerWithRootViewController</span><span class="p">((</span><span class="n">rootViewController</span> <span class="n">as</span><span class="o">!</span> <span class="n">UITabBarController</span><span class="p">).</span><span class="n">selectedViewController</span><span class="p">)</span>
+</span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">rootViewController</span><span class="p">.</span><span class="n">isKindOfClass</span><span class="p">(</span><span class="n">UINavigationController</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">topViewControllerWithRootViewController</span><span class="p">((</span><span class="n">rootViewController</span> <span class="n">as</span><span class="o">!</span> <span class="n">UINavigationController</span><span class="p">).</span><span class="n">visibleViewController</span><span class="p">)</span>
+</span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">rootViewController</span><span class="p">.</span><span class="n">presentedViewController</span> <span class="o">!=</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">topViewControllerWithRootViewController</span><span class="p">(</span><span class="n">rootViewController</span><span class="p">.</span><span class="n">presentedViewController</span><span class="p">)</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="n">rootViewController</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">hellip</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>The method <code>topViewControllerWithRootViewController</code> gets the top View Controller from the window to checked if it has the method/selector <code>canRotate</code> implemented, if so <code>.AllButUpsideDown</code> is returned from <code>supportedInterfaceOrientationsForWindow</code>.</p>
+
+<p>Now all you need to do is to implement an empty <code>canRotate</code> on the View Controller that you want to be rotated and before it gets disappeared return the orientation back to portrait.</p>
+
+<p>Below you can see how our View Controller should be for both scenarios: <em>Show</em> and <em>Present Modally</em></p>
+
+<h3>Show</h3>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>ShowViewController.swift </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">class</span> <span class="nl">ViewController:</span> <span class="n">UIViewController</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">override</span> <span class="n">func</span> <span class="n">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+</span><span class='line'>    <span class="c1">// Do any additional setup after loading the view, typically from a nib.</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">override</span> <span class="n">func</span> <span class="n">viewWillDisappear</span><span class="p">(</span><span class="n">animated</span> <span class="o">:</span> <span class="n">Bool</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">super</span><span class="p">.</span><span class="n">viewWillDisappear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">isMovingFromParentViewController</span><span class="p">())</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">UIDevice</span><span class="p">.</span><span class="n">currentDevice</span><span class="p">().</span><span class="n">setValue</span><span class="p">(</span><span class="n">Int</span><span class="p">(</span><span class="n">UIInterfaceOrientation</span><span class="p">.</span><span class="n">Portrait</span><span class="p">.</span><span class="n">rawValue</span><span class="p">),</span> <span class="nl">forKey:</span> <span class="s">&quot;orientation&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">func</span> <span class="n">canRotate</span><span class="p">()</span> <span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">Void</span> <span class="p">{}</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>Present Modally</h3>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>ShowViewController.swift </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">class</span> <span class="nl">PresentedViewController:</span> <span class="n">UIViewController</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">override</span> <span class="n">func</span> <span class="n">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+</span><span class='line'>    <span class="c1">// Do any additional setup after loading the view, typically from a nib.</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">@</span><span class="kt">IBAction</span> <span class="n">func</span> <span class="n">didDismissButtonPress</span><span class="p">(</span><span class="nl">sender:</span> <span class="n">UIButton</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">dismissViewControllerAnimated</span><span class="p">(</span><span class="n">true</span><span class="p">)</span> <span class="p">{</span> <span class="p">()</span> <span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">Void</span> <span class="k">in</span>
+</span><span class='line'>        <span class="n">UIDevice</span><span class="p">.</span><span class="n">currentDevice</span><span class="p">().</span><span class="n">setValue</span><span class="p">(</span><span class="n">Int</span><span class="p">(</span><span class="n">UIInterfaceOrientation</span><span class="p">.</span><span class="n">Portrait</span><span class="p">.</span><span class="n">rawValue</span><span class="p">),</span> <span class="nl">forKey:</span> <span class="s">&quot;orientation&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">func</span> <span class="n">canRotate</span><span class="p">()</span> <span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">Void</span> <span class="p">{}</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<hr />
+
+<p>This project sample can be downloaded from <a href="https://github.com/jairobjunior/labs.jairobjunior.com.DeviceRotationOnlyOneViewController">github</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Creating UIButton with border and hover native iOS]]></title>

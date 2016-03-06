@@ -9,7 +9,7 @@
   <meta name="author" content="Jairo Barros Junior">
 
   
-  <meta name="description" content="It&rsquo;s no secret the tech industry is booming, and as a result there are a lot of mediocre to just plain awful apps racing to the market. I’ve &hellip;">
+  <meta name="description" content="It might be tricky to create a whole iOS Swift project using portrait only and suddenly when your app is far down the road you need to give &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +84,57 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/03/05/how-to-rotate-only-one-view-controller-to-landscape-in-ios-slash-swift/">How to Rotate Only One View Controller to Landscape Orientation in iOS Swift</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-03-05T23:38:19-08:00" pubdate data-updated="true">Mar 5<span>th</span>, 2016</time>
+        
+         | <a href="/blog/2016/03/05/how-to-rotate-only-one-view-controller-to-landscape-in-ios-slash-swift/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img class="right half" src="/images/labs/2016-03-06/screens-device-orientation.png" width="395" height="293"></p>
+
+<p>It might be tricky to create a whole iOS Swift project using portrait only and suddenly when your app is far down the road you need to give landscape orientation support for only one View Controller.</p>
+
+<p>Immediately you could think&hellip; &ldquo;I can get this done by using <code>func shouldAutorotate() -&gt; Bool</code> and <code>func supportedInterfaceOrientations() -&gt; UIInterfaceOrientationMask</code>&rdquo;.</p>
+
+<p>The only problem of this is that you&rsquo;ll need to enable device rotation for both <strong>Landscape Left and Right</strong> and depending of your code structure you&rsquo;ll need to go over every simple View Controller adding <code>func shouldAutorotate() -&gt; Bool</code> and <code>func supportedInterfaceOrientations() -&gt; UIInterfaceOrientationMask</code>. It can be painful if you have a lot of classes.</p>
+
+<p>Fortunately we can move all of the hard work to be done at one place, which is in our <em>AppDelegate.swift</em>.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2016/03/05/how-to-rotate-only-one-view-controller-to-landscape-in-ios-slash-swift/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -246,6 +297,10 @@
 </section><section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/03/05/how-to-rotate-only-one-view-controller-to-landscape-in-ios-slash-swift/">How to Rotate Only One View Controller to Landscape Orientation in iOS Swift</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/10/28/how-to-tell-if-you-hired-the-right-developer-for-your-mobile-app/">How To Tell If You Hired The Right Developer For Your Mobile App</a>
