@@ -22,6 +22,8 @@ For that reason I implemented a class to deal with the background of the highlig
 
 First you have to add [Catfish][cf] as a dependency to your project, inside of it there is a class `CFUIButton`. It has methods to:
 
+<!--more-->
+
 {% codeblock lang:objc CFUIButton.h %}
 + (void)setBorderColor:(UIColor*)color;
 - (void)setBorderColor:(UIColor*)color;

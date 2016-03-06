@@ -12,6 +12,8 @@ It's no secret the tech industry is booming, and as a result there are a lot of 
 
 Most of my clients already had a previous version of their app or it was under development. They come up looking to add new features, updating the app to support the latest OS system or “just“ swapping the whole [UI/UX][ui-ux] to a modern look and feel. But be careful, these are changes that might turn out to be more expensive than expected. I am going to help you avoid future high costs by getting the right [dev team (a company, code house or freelancers)][sook-apps] at the beginning of your project.
 
+<!--more-->
+
 One thing that shocks me the most is how bad the internal quality of mobile apps are being delivered. I am the kind of person that loves to reuse, recycle and not keep useless stuff. So, I do the same with code, but it’s almost impossible to reuse or refactor a project that has all of the potential to be simple, but it wasn’t because of the “creative” dev team who made such a mess that in a short term the project will be filled with bugs and impracticable to give maintenance.
 
 It’s common to hear developers say: 

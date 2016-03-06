@@ -17,7 +17,7 @@ Somewhere in between kicking [trollers][tr] off chat sites and playing on compet
 
 My next step was studying Information Systems, where I learned the difference between being a [programmer][p] and a [software architect][sa]. Becoming a software architect allowed me to focus on increasing the internal quality of code. After that my career began to unfold organically. I continued studying varies program languages while working as a developer and team leader with different companies including the Court of Justice in Brasil, and Indra. During this time I cofounded a software company called [Sook][s], that developed unique systems for client and business interaction.
 
-Over the last 2 years my focus has turned solely to mobile development. I currently own a coding house, Sook Apps, that develops mobile apps and mobile software. We build our projects natively for iPhone/iPad and Android, our apps are in users hands all over the world. Beyond programming my career has allowed me to write, teach, and speak at various academic events. My favorite moments are when I see the success of a former student, some who I end up collaborating with.
+Since 2012 my focus has turned solely to mobile development. I currently own a coding house, Sook Apps, that develops mobile apps and mobile software. We build our projects natively for iPhone/iPad and Android, our apps are in users hands all over the world. Beyond programming my career has allowed me to write, teach, and speak at various academic events. My favorite moments are when I see the success of a former student, some who I end up collaborating with.
 
 ## Open source
 
