@@ -13,9 +13,9 @@ It might be tricky to create a whole iOS Swift project using portrait only and s
 
 Immediately you could think... "I can get this done by using `func shouldAutorotate() -> Bool` and `func supportedInterfaceOrientations() -> UIInterfaceOrientationMask`".
 
-The only problem of this is that you'll need to enable device rotation for both **Landscape Left and Right** and depending of your code structure you'll need to go over every simple View Controller adding `func shouldAutorotate() -> Bool` and `func supportedInterfaceOrientations() -> UIInterfaceOrientationMask`. It can be painful if you have a lot of classes.
+The only problem of this is that you'll need to enable device rotation for both **Landscape Left and Right** and depending on your code structure you'll need to go over every simple View Controller adding `func shouldAutorotate() -> Bool` and `func supportedInterfaceOrientations() -> UIInterfaceOrientationMask`. It can be painful if you have a lot of classes.
 
-Fortunately we can move all of the hard work to be done at one place, which is in our *AppDelegate.swift*.
+Fortunately we can move all of the hard work to be done in one place, which is in our *AppDelegate.swift*.
 
 <!--more-->
 
@@ -55,9 +55,9 @@ private func topViewControllerWithRootViewController(rootViewController: UIViewC
 ...
 {% endcodeblock %}
 
-The method `topViewControllerWithRootViewController` gets the top View Controller from the window to checked if it has the method/selector `canRotate` implemented, if so `.AllButUpsideDown` is returned from `supportedInterfaceOrientationsForWindow`.
+The method `topViewControllerWithRootViewController` gets the top View Controller from the window and checks if it has the method/selector `canRotate` implemented, if so `.AllButUpsideDown` is returned from `supportedInterfaceOrientationsForWindow`.
 
-Now all you need to do is to implement an empty `canRotate` on the View Controller that you want to be rotated and before it gets disappeared return the orientation back to portrait.
+Now all you need to do is to implement an empty `canRotate` on the View Controller that needs be rotated and before it disappears you should return the orientation back to portrait.
 
 Below you can see how our View Controller should be for both scenarios: *Show* and *Present Modally*
 
