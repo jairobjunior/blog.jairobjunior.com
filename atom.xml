@@ -4,7 +4,7 @@
   <title><![CDATA[@jairobjunior - Mobile Life]]></title>
   <link href="http://www.jairobjunior.com/atom.xml" rel="self"/>
   <link href="http://www.jairobjunior.com/"/>
-  <updated>2016-03-06T15:42:53-08:00</updated>
+  <updated>2016-03-07T12:43:40-08:00</updated>
   <id>http://www.jairobjunior.com/</id>
   <author>
     <name><![CDATA[Jairo Barros Junior]]></name>
@@ -24,9 +24,9 @@
 
 <p>Immediately you could think&hellip; &ldquo;I can get this done by using <code>func shouldAutorotate() -&gt; Bool</code> and <code>func supportedInterfaceOrientations() -&gt; UIInterfaceOrientationMask</code>&rdquo;.</p>
 
-<p>The only problem of this is that you&rsquo;ll need to enable device rotation for both <strong>Landscape Left and Right</strong> and depending of your code structure you&rsquo;ll need to go over every simple View Controller adding <code>func shouldAutorotate() -&gt; Bool</code> and <code>func supportedInterfaceOrientations() -&gt; UIInterfaceOrientationMask</code>. It can be painful if you have a lot of classes.</p>
+<p>The only problem of this is that you&rsquo;ll need to enable device rotation for both <strong>Landscape Left and Right</strong> and depending on your code structure you&rsquo;ll need to go over every simple View Controller adding <code>func shouldAutorotate() -&gt; Bool</code> and <code>func supportedInterfaceOrientations() -&gt; UIInterfaceOrientationMask</code>. It can be painful if you have a lot of classes.</p>
 
-<p>Fortunately we can move all of the hard work to be done at one place, which is in our <em>AppDelegate.swift</em>.</p>
+<p>Fortunately we can move all of the hard work to be done in one place, which is in our <em>AppDelegate.swift</em>.</p>
 
 <!--more-->
 
@@ -93,9 +93,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>The method <code>topViewControllerWithRootViewController</code> gets the top View Controller from the window to checked if it has the method/selector <code>canRotate</code> implemented, if so <code>.AllButUpsideDown</code> is returned from <code>supportedInterfaceOrientationsForWindow</code>.</p>
+<p>The method <code>topViewControllerWithRootViewController</code> gets the top View Controller from the window and checks if it has the method/selector <code>canRotate</code> implemented, if so <code>.AllButUpsideDown</code> is returned from <code>supportedInterfaceOrientationsForWindow</code>.</p>
 
-<p>Now all you need to do is to implement an empty <code>canRotate</code> on the View Controller that you want to be rotated and before it gets disappeared return the orientation back to portrait.</p>
+<p>Now all you need to do is to implement an empty <code>canRotate</code> on the View Controller that needs be rotated and before it disappears you should return the orientation back to portrait.</p>
 
 <p>Below you can see how our View Controller should be for both scenarios: <em>Show</em> and <em>Present Modally</em></p>
 

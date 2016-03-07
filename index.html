@@ -121,9 +121,9 @@
 
 <p>Immediately you could think&hellip; &ldquo;I can get this done by using <code>func shouldAutorotate() -&gt; Bool</code> and <code>func supportedInterfaceOrientations() -&gt; UIInterfaceOrientationMask</code>&rdquo;.</p>
 
-<p>The only problem of this is that you&rsquo;ll need to enable device rotation for both <strong>Landscape Left and Right</strong> and depending of your code structure you&rsquo;ll need to go over every simple View Controller adding <code>func shouldAutorotate() -&gt; Bool</code> and <code>func supportedInterfaceOrientations() -&gt; UIInterfaceOrientationMask</code>. It can be painful if you have a lot of classes.</p>
+<p>The only problem of this is that you&rsquo;ll need to enable device rotation for both <strong>Landscape Left and Right</strong> and depending on your code structure you&rsquo;ll need to go over every simple View Controller adding <code>func shouldAutorotate() -&gt; Bool</code> and <code>func supportedInterfaceOrientations() -&gt; UIInterfaceOrientationMask</code>. It can be painful if you have a lot of classes.</p>
 
-<p>Fortunately we can move all of the hard work to be done at one place, which is in our <em>AppDelegate.swift</em>.</p>
+<p>Fortunately we can move all of the hard work to be done in one place, which is in our <em>AppDelegate.swift</em>.</p>
 
 </div>
   
